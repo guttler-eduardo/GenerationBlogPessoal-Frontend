@@ -1,0 +1,47 @@
+.fa-solid {
+    color: white;
+}
+
+.fa-solid:hover {
+    color: #161c2d;
+}
+
+.fs-16 {
+
+    font-size: 16pt;
+}
+
+a {
+    cursor: pointer;
+}
+
+.under-link {
+    margin: 3px;
+    font-weight: bold;
+    color: white;
+    font-size: 16pt;
+    display: inline-block;
+    position: relative;
+
+}
+
+.under-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #161c2d;
+    transition: width 0.15s ease-out;
+
+}
+
+.under-link:hover::before {
+    width: 60%;
+
+}
+
+.under-link:hover {
+    color: #161c2d;
+}
