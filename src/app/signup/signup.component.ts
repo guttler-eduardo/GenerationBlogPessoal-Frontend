@@ -19,8 +19,8 @@ export class SignupComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-    window.scroll(0, 0)
+  ngOnInit() {
+    window.scroll(0,0)
   }
 
   confirmarSenha(event: any) {

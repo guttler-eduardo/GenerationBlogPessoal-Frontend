@@ -38,7 +38,7 @@
 
                     <div class="form-group">
                         <label for="senhaConfirmar">Confirmar Senha</label>
-                        <input class="form-control" type="password" name="senhaConfirmar" id="senhaConfirmar"
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="senhaConfirmar" id="senhaConfirmar"
                         placeholder="Confirme sua senha">
                     </div>
 
@@ -54,7 +54,7 @@
 
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger" routerLink='/login'>Cancelar</button>
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                        <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
                     </div>
                 </div>
             </div>
