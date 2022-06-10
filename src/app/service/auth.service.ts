@@ -15,11 +15,13 @@ export class AuthService {
   ) { }
 
   login(userLogin: UserLogin): Observable<UserLogin> {
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>
+    ('https://generation-blogpessoal-backend.herokuapp.com/usuarios/logar', userLogin)
   }
 
   signup(user: User): Observable<User> {
-    return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user) 
+    return this.http.post<User>
+    ('https://generation-blogpessoal-backend.herokuapp.com/usuarios/cadastrar', user) 
   }
 
   loggedin() {

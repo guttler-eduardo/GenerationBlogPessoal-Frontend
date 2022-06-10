@@ -29,6 +29,7 @@ import { TemaComponent } from './tema/tema.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+    
   ],
   providers: [{
     provide: LocationStrategy,
