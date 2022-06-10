@@ -13,11 +13,11 @@
 
             <ul class="navbar-nav mr-auto d-flex align-items-center">
                 <li class="nav-item active">
-                    <img src="https://i.imgur.com/Nho5TnJ.jpg" alt="Dummy PFP" width="50px" height="50px"
+                    <img src="{{foto}}" alt="Dummy PFP" width="50px" height="50px"
                     class="img-fluid rounded-circle">
                 </li>
                 <li class="nav-item">
-                    <p class="m-3 fw-bold text-white fs-16">Nome do Usuário</p>
+                    <p class="m-3 fw-bold text-white fs-16">Olá, {{nome}}</p>
                 </li>
                 <li class="nav-item">
                     <a href=""><i class="fa-solid fa-pen-to-square fs-16"></i></a>
@@ -27,7 +27,7 @@
             <ul class="navbar-nav ms-auto d-flex align-items-center">
                 <li class="nav-item">
                     <p class="under-link">Sair 
-                    <a href=""><i class="fa-solid fa-right-from-bracket"></i></a></p>
+                    <a (click)='logout()' href=""><i class="fa-solid fa-right-from-bracket"></i></a></p>
                 </li>
             </ul>
         </div>
