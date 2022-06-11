@@ -24,6 +24,10 @@ export class AuthService {
     ('https://generation-blogpessoal-backend.herokuapp.com/usuarios/cadastrar', user) 
   }
 
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`https://generation-blogpessoal-backend.herokuapp.com/usuarios/${id}`)
+  }
+
   loggedin() {
     let ok: boolean = false
 
