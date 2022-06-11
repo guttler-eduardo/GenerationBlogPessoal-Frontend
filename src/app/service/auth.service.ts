@@ -33,4 +33,8 @@ export class AuthService {
 
     return ok
   }
+
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`https://generation-blogpessoal-backend.herokuapp.com/usuarios/${id}`)
+  }
 }
