@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -16,11 +18,13 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
+
   }
 
   confirmarSenha(event: any) {
@@ -35,13 +39,13 @@ export class SignupComponent implements OnInit {
     this.user.tipoUsuario = this.tipoUsers
 
     if(this.user.senha != this.confirmarSenhas) {
-      alert('As senhas não são idênticas')
+      this.alertas.showAlertDanger('As senhas não são idênticas')
     }
     else {
       this.authService.signup(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/login'])
-        alert('Usuário cadastrado com sucesso!')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!')
       })
     }
   }
