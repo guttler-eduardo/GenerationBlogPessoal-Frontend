@@ -24,6 +24,11 @@ export class AuthService {
     ('https://generation-blogpessoal-backend.herokuapp.com/usuarios/cadastrar', user) 
   }
 
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>
+    ('https://generation-blogpessoal-backend.herokuapp.com/usuarios', user) 
+  }
+
   getByIdUser(id: number): Observable<User> {
     return this.http.get<User>(`https://generation-blogpessoal-backend.herokuapp.com/usuarios/${id}`)
   }
