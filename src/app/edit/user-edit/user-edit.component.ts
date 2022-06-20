@@ -18,7 +18,7 @@ export class UserEditComponent implements OnInit {
   confirmarSenhas: string
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
     private alert: AlertasService

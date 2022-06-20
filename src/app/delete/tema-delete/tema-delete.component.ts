@@ -44,5 +44,4 @@ export class TemaDeleteComponent implements OnInit {
       this.router.navigate(['/tema'])
     })
   }
-
 }
